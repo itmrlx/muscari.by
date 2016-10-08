@@ -1,0 +1,90 @@
+// sources
+@import 'src/_fonts.scss'; // fonts
+@import 'src/_bootstrap.scss'; // bootstrap
+@import 'src/_wordpress.scss'; // wp classes
+@import 'src/_slick.scss'; // slick slider
+@import 'src/_jquery.fancybox.scss'; // fancybox
+
+// modules
+
+// utilites
+*{
+	outline: none;
+}
+.position-static{
+	position: static;
+}
+.wrapper{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	min-width: 320px;
+}
+.container{
+	min-width: 320px;
+}
+.webber{
+	img{
+		height: 30px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+.hover-text{
+	text-decoration: none;
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		width: 0%;
+		height: 1px;
+		left: 50%;
+		bottom: 0;
+		background: $brand-primary;
+		transition: all .3s;
+	}
+	&.white{
+		color: #fff;
+		&:after{
+			background: #fff;
+		}
+	}
+	&:hover{
+		text-decoration: none;
+		&:after{
+			left: 0;
+			width: 100%;
+		}
+	}
+}
+hr{
+	margin: 15px 0;
+}
+hr.pages{
+	border-color: lighten($brand-primary,40%);
+	margin: 0;
+}
+.col-xs-2-5{
+	display: block;
+	float: left;
+	width: 20%;
+	padding: 0 15px;
+}
+.page-numbers{
+	li{
+		span,a{
+			border-radius: 0;
+		}
+		span{
+			&.current{
+				background: $brand-primary;
+				color: #fff;
+				border-color: $brand-primary;
+			}
+		}
+	}
+}
+iframe {
+	border: none;
+	margin: 5px 10px;
+}
